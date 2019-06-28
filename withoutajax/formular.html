@@ -1,0 +1,212 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>formularseite</title>
+    <style>
+        #logo {
+            position: absolute;
+            width: 1400px;
+            height: 100px;
+        }
+
+        a {
+            font-family: Melbourne;
+        }
+
+        #menu { /* umschließendes Päckchen */
+            font-size: 20px;
+            position: relative;
+            top: 125px;
+            z-index: 100;
+        }
+
+        #menu ul { /* umschließende Liste */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li.topmenu {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .topmenu a {
+            float: left;
+            width: 334px;
+            text-align: center;
+            background-color: black;
+        }
+
+        .topmenu ul { /* verstecken von Unterpunkten */
+            display: none;
+        }
+
+        .topmenu a, .submenu a { /* für ober und untermenü */
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .submenu a { /* für untermenü */
+            font-size: 17px;
+            width: 334px;
+            background-color: #0492C2;
+        }
+
+        a:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .topmenu:hover ul { /* popup der Unterpunkte */
+            display: block;
+        }
+
+        #inputs {
+            width: 260px;
+            border: 4px #0492C2;
+            padding: 20px;
+        }
+
+        img {
+            width: 240px;
+            heigth: 470px;
+            position: absolute;
+            right: 221px;
+        }
+
+        body {
+            background-color: lightgray;
+            height:1000px;
+        }
+
+        #outer {
+            background-color: white;
+            padding: 50px;
+            width: 340px;
+            height: 300px;
+            position: absolute;
+            left: 1000px;
+            top: 280px;
+            border: 5px solid #0492C2;
+        }
+
+        #header label {
+            font-family: Melbourne;
+            font-size: 320%;
+        }
+
+        label {
+            font-family: Melbourne;
+            font-size: 160%;
+        }
+
+        #logo img {
+            width: 900px;
+            height: 115px;
+        }
+
+        #submitb {
+            width: 260px;
+            height: 40px;
+        }
+
+        .labelz {
+            width: 190px;
+            height: 25px;
+        }
+
+        #footer {
+            position: absolute;
+            width: 1200px;
+            height: 200px;
+            top: 850px;
+            background-color: black;
+        }
+
+        #footer ul {
+            list-style: none;
+        }
+        #listFooter ul li{
+            color:white;
+        }
+        #listFooter {
+            margin-top: 10px;
+            position: absolute;
+            right: 1400px;
+        }
+
+        #steuer {
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            font-size: 15px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+<div id="logo"><img src="banner.png"></div>
+<div id="menu">
+    <ul>
+        <li class="topmenu">
+            <a href="index.jsp">Fertige PC</a>
+            <ul>
+                <li class="submenu"><a href="index.jsp">Gaming</a></li>
+                <li class="submenu"><a href="index.jsp">Büro/ Multimedia</a></li>
+                <li class="submenu"><a href="index.jsp">Video Editing</a></li>
+            </ul>
+        </li>
+        <li class="topmenu">
+            <a>Unser besonderer Service</a>
+            <ul>
+                <li class="submenu"><a>Unterpunkt 3.1</a></li>
+                <li class="submenu"><a>Unterpunkt 3.2</a></li>
+                <li class="submenu"><a>Gaming</a></li>
+            </ul>
+        </li>
+        <li class="topmenu">
+            <a>Über uns</a>
+            <ul>
+                <li class="submenu"><a id="test" href="">Unterpunkt 3.1</a></li>
+                <li class="submenu"><a>Unterpunkt 3.2</a></li>
+            </ul>
+        </li>
+        <li class="topmenu">
+            <a href="formular.html">Kontakt</a>
+        </li>
+    </ul>
+</div>
+<form action="/Controller">
+    <div id="outer">
+        <div id="header"><label> <b>Kontaktformular</b></label></div>
+        <br>
+        <div id="inputs">
+            <label for="name">name: </label><input id="name" type="text" name="name" class="labelz">
+            <br><br>
+            <label for="email">email: </label><input id="email" type="text" name="email" class="labelz">
+            <br><br>
+            <label for="peter">handy: </label><input type="text" id="peter" name="Handynummer" class="labelz">
+            <br><br>
+            <input id="submitb" type="submit">
+        </div>
+    </div>
+    </div>
+</form>
+<div id="footer">
+    <div id="listFooter">
+        <ul>
+            <li>Kontakt</li>
+            <li>Datenschutz</li>
+            <li>Impressum</li>
+            <li>AGB</li>
+            <li>Widerrufsrecht</li>
+        </ul>
+    </div>
+    <span id="steuer"> Alle Preise exklusive Mehrwertsteuer (gemäß §19 UStG) zzgl. Versandkosten</span>
+</div>
+</body>
+</html>
